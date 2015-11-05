@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Nexus 6",
+    "adb": {
+      "ro.product.device": [ "shamu" ],
+      "ro.bootloader": ["0x7110"],
+      "ro.build.id": ["LMY48M", "LMY47D"]
+    },
+    "fastboot": {
+      "product": [ "shawu" ]
+    }
+  }
+]
+
