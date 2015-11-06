@@ -34,6 +34,7 @@ $(call inherit-product, device/moto/shamu/device.mk)
 $(call inherit-product-if-exists, vendor/moto/shamu/device-vendor.mk)
 
 # for Gecko
+PRODUCT_PACKAGES := $(filter-out @inherit:vendor/moto/shamu/device-vendor.mk,$(PRODUCT_PACKAGES))
 
 TARGET_DEVICE_BLOBS := vendor/moto/shamu/device-partial.mk \
                        vendor/broadcom/shamu/device-partial.mk \
