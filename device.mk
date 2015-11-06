@@ -334,8 +334,8 @@ $(call inherit-product-if-exists, hardware/qcom/msm8x84/msm8x84.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x84/msm8x84-gpu-vendor.mk)
 
 # setup dm-verity configs.
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
-$(call inherit-product, build/target/product/verity.mk)
+#PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
+#$(call inherit-product, build/target/product/verity.mk)
 
 # setup scheduler tunable
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -360,3 +360,14 @@ PRODUCT_OEM_PROPERTIES := \
 # Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
 PRODUCT_COPY_FILES += \
     device/moto/shamu/qcril.db:system/etc/ril/qcril.db
+
+# for Gecko
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.has_home_button=0
+
+PRODUCT_COPY_FILES += \
+    device/moto/shamu/volume.cfg:system/etc/volume.cfg
+
+GAIA_DEV_PIXELS_PER_PX := 2.25
+
