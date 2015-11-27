@@ -21,4 +21,12 @@
 #define BTIF_HF_WBS_PREFERRED TRUE
 #define BLE_VND_INCLUDED TRUE
 
+/* B2G common configuration. */
+#include <b2g_bdroid_buildcfg.h>
+
+/**
+ * Device specific configuration
+ */
+#define BTM_DEF_LOCAL_NAME   "Nexus6"
+
 #endif
