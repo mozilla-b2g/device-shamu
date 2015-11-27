@@ -362,6 +362,8 @@ PRODUCT_COPY_FILES += \
     device/moto/shamu/qcril.db:system/etc/ril/qcril.db
 
 # for Gecko
+PRODUCT_PACKAGES += \
+    bluetooth.default
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.moz.has_home_button=0
