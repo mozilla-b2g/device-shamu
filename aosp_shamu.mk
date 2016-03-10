@@ -40,6 +40,8 @@ TARGET_DEVICE_BLOBS := vendor/moto/shamu/device-partial.mk \
                        vendor/broadcom/shamu/device-partial.mk \
                        vendor/qcom/shamu/device-partial.mk
 
+# Set Gecko toolchain
+GECKO_TOOLS_PREFIX = prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 PRODUCT_NAME := aosp_shamu
 
